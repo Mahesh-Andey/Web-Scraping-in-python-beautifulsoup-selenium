@@ -7,16 +7,15 @@ with open('website.html',  encoding="utf8") as file:
 
 soup = BeautifulSoup(contents, 'html.parser')
 
-# print(soup.title)
+print(soup.title)
 
-# anchor = soup.find_all(name='a')
-#
-# for tag in anchor:
-#     print(tag.getText())
+anchor = soup.find_all(name='a')
 
+for tag in anchor:
+    print(tag.getText())
 
-# a = soup.find(id="name")
-# print(a)
+a = soup.find(id="name")
+print(a)
 
 b = soup.select_one(selector='p a')
 print(b)
